@@ -1,0 +1,261 @@
+/* Importa a fonte Poppins (Google fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Reset: limpar as formatações padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+
+    /* Torna suave o movimento do scroll */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #0d1b2a;
+}
+
+/* ===== Barra de navegação ===== */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    background-color: #415a77;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    width: 100%;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    transition: 300ms;
+
+    /* Transforma o texto para maiúsculas */
+    text-transform: uppercase;
+
+    /* border: solid 1px #ff7700; */
+}
+
+nav a:hover {
+    color: #778da9;
+}
+/* ===== /Barra de navegação ===== */
+
+
+
+/* ===== header: Banner com imagem ===== */
+header {
+    height: 100vh;
+    background-image: url('../img/foto.jpg');
+    background-size: cover;
+}
+
+/* ===== /header: Banner com imagem ===== */
+
+
+
+/* Todas as section */
+section {
+    padding: 3rem 1rem;
+
+    /* border: solid 1px #ff7700; */
+}
+
+
+/* ===== section #info: Informações ===== */
+#info {
+    display: flex;
+    flex-direction: row;
+}
+
+#info div {
+    flex: 1;
+    padding: 2rem;
+
+    /* border: solid 2px #2f00ff; */
+}
+
+#info img {
+    width: 100%;
+}
+
+#info p {
+    text-align: justify;
+}
+/* ===== /section #info: Informações ===== */
+
+
+
+/* ===== section #produto: Produtos ===== */
+/* .grupo-produtos { */
+#produto {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2rem;
+    padding: 2rem 3rem;
+}
+
+/* .grupo-produtos img { */
+#produto img {
+    width: 100%;
+    border: solid 0.8rem var(--color-01);
+    border-radius: 0.8rem;
+    box-shadow: 0 0.3rem 0.5rem 0.05rem #0d1b2aa0;
+}
+/* ===== /section #produto: Produtos ===== */
+
+
+
+/* ===== section #avaliacao: Avaliações ===== */
+.avaliacao {
+    padding: 3rem;
+}
+
+.avaliacao article {
+    margin: 1rem 0;
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    gap: 2rem;
+    border: solid 0.1rem #778da9;
+}
+
+.avaliacao article button {
+    width: 25rem;
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+}
+/* ===== /section #avaliacao: Avaliações ===== */
+
+/* Alt + Shift + F  == formatar o código */
+
+
+
+/* ===== Footer ===== */
+footer {
+    min-height: 15rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 1rem 3rem;
+    background-color: #0d1b2a;
+    color: #778da9;
+}
+
+footer div {
+    flex: 1;
+
+    /* border: solid 1px red; */
+}
+
+footer li {
+    list-style-type: none;
+}
+/* ===== /Footer ===== */
+
+
+
+/* ===== Media Queries ===== */
+
+/* Portrait (Retrato): smartphone em pé */
+/* @media (max-width: 576px) { */
+@media (min-width: 340px) {
+    #info {
+        flex-direction: column;
+    }
+
+    #produto {
+        grid-template-columns: auto;
+    }
+
+    .avaliacao article {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .avaliacao article p {
+        text-align: justify;
+        padding: 0 1rem;
+    }
+
+    .avaliacao article button {
+        align-self: center;
+        width: 10rem;
+        margin-bottom: 2rem;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+
+    
+    /* Valicação Media Query */
+    nav {
+        background-color: #fe391b;
+    }
+}
+
+/* Landscape (Paisagem): smartphone de lado */
+@media (min-width: 576px) {
+
+
+
+    /* Valicação Media Query */
+    nav {
+        background-color: #6adc00;
+    }
+}
+
+/* Tablet*/
+@media (min-width: 768px) {
+
+
+
+    /* Valicação Media Query */
+    nav {
+        background-color: #0051dc;
+    }
+}
+
+:root{
+--color-01:#cdb4db;
+--color-02:#ffc8dd;
+--color-03:#ffafcc;
+--color-04:#bde0fe;
+--color-05:#a2d2ff;
+    
+
+}
+
+/*notebook*/
+@media(min-width: 992px){
+
+nav{background-color: var(--color-05);
+    background
+}
+}
+
+/*desktop*/
+@media(min-width: 1200px){
+
+    nav {background-color: var(--color-04);
+        background
+    }
+    }
